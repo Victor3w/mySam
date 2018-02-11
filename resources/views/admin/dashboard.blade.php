@@ -33,7 +33,7 @@
                 </a>
             </div>
             <div class="col-sm-6">
-                <a class="btn btn-block btn-default" href="#">Создать Материал</a>
+                <a class="btn btn-block btn-default" href="{{route('admin.article.index')}}">Создать Новость</a>
                 <a href="#" class="list-group-item">
                     <h4 class="list-group-item-heading">Материал первый</h4>
                     <p class="list-group-item-text">Категория</p>

@@ -1,0 +1,22 @@
+@extends('admin.layouts.app_admin')
+
+@section('content')
+    <div class="container">
+        @component('admin.components.breadcrumb')
+            @slot('title') Редактирование категории @endslot
+            @slot('parent') Главная @endslot
+            @slot('active') Категория @endslot
+        @endcomponent
+
+        <hr>
+
+        <form action="{{ route('admin.category.update', $category) }}"
+              method="post" class="form-horizontal">
+            <input type="hidden" name="_method" value="put">
+            {{ csrf_field() }}
+
+            @include('admin.categories.partials.form')
+        </form>
+
+    </div>
+@endsection

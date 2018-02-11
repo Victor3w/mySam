@@ -22,6 +22,7 @@ Route::group([
 ], function(){
     Route::get('/', 'DashboardController@dashboard')->name('admin.index');
     Route::resource('/category','CategoryController', ['as' => 'admin']);
+    Route::resource('/article','ArticleController', ['as' => 'admin']);
 });
 
 Auth::routes();
