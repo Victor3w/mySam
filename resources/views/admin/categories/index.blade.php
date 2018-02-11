@@ -52,7 +52,7 @@
                     <tr>
                         <td colspan="3">
                             <ul class="pagination pull-right">
-                                {{ $category->links() }}
+                                {{ $categories->links() }}
                             </ul>
                         </td>
                     </tr>
