@@ -1,5 +1,6 @@
 
 window._ = require('lodash');
+window._ = require('sweetalert');
 window.Popper = require('popper.js').default;
 
 /**
