@@ -11,7 +11,9 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
-                @include('layouts.top_menu', ['categories' =>  $categories ])
+                @if(!empty($categories))
+                    @include('layouts.top_menu', ['categories' =>  $categories ])
+                @endif
             </ul>
 
             <!-- Right Side Of Navbar -->

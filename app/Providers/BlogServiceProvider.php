@@ -32,7 +32,7 @@ class BlogServiceProvider extends ServiceProvider
     {
 //        dd(count(Category::where('parent_id',0)->where('published',0)->get()));
         View::composer('layouts.header', function($view){
-            $view->with('categories', Category::where('parent_id',0)->where('published',0)->get());
+            $view->with('categories', Category::where('parent_id',0)->where('published',1)->get());
         });
     }
 }

@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('blog.home');
 });
 
+Route::get('/blog/category/{slug?}','BlogController@category')->name('category');
+Route::get('/blog/article/{slug?}','BlogController@article')->name('article');
+
 Route::group([
     'prefix' => 'admin',
     'namespace' => 'Admin',

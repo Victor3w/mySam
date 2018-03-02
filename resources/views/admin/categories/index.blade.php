@@ -29,6 +29,7 @@
                 <th class="text-right">Действие</th>
             </thead>
             <tbody>
+            @if(!empty($categories))
                 @forelse($categories as $category)
                     <tr>
                         <td>{{ $category->title }}</td>
@@ -58,18 +59,19 @@
                             </h2>
                         </td>
                     </tr>
-                @endforelse
-                <tfoot>
-                    <tr>
-                        <td colspan="3">
-                            <ul class="pagination pull-right">
-                                {{ $categories->links() }}
-                            </ul>
-                        </td>
-                    </tr>
-                </tfoot>
+            @endforelse
             </tbody>
-        </table>
+            <tfoot>
+            <tr>
+                <td colspan="3">
+                    <ul class="pagination pull-right">
+                        {{ $categories->links() }}
+                    </ul>
+                </td>
+            </tr>
+            </tfoot>
+            @endif
+            </table>
 
     </div>
 @endsection
